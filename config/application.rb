@@ -22,6 +22,7 @@ module LibraryManagementApiRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.eager_load_paths << Rails.root.join('lib')
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
       g.orm :active_record, foreign_key_type: :uuid
